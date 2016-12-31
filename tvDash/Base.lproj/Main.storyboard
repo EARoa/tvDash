@@ -1,14 +1,21 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="appleTV" orientation="landscape">
+        <adaptation id="light"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="tvOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="tvDash" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,8 +23,60 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TODAY IN THE WORLD" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qis-5Z-OzI">
+                                <rect key="frame" x="584" y="57" width="752" height="84"/>
+                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="70"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kGe-PA-Aeg">
+                                <rect key="frame" x="20" y="342" width="623" height="132"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="623" id="Pvk-Q0-2vp"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="70"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Weather" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hXd-rt-IU4">
+                                <rect key="frame" x="182" y="250" width="299" height="84"/>
+                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="70"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Trending" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0jl-XA-ew2">
+                                <rect key="frame" x="803" y="250" width="315" height="84"/>
+                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="70"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mentions" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NsU-1o-eIb">
+                                <rect key="frame" x="1414" y="250" width="327" height="84"/>
+                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="70"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="0jl-XA-ew2" firstAttribute="baseline" secondItem="hXd-rt-IU4" secondAttribute="firstBaseline" id="1SP-cK-vEU"/>
+                            <constraint firstItem="hXd-rt-IU4" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="250" id="A9I-xT-kM7"/>
+                            <constraint firstItem="qis-5Z-OzI" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="57" id="AJ0-UJ-CyX"/>
+                            <constraint firstAttribute="trailing" secondItem="NsU-1o-eIb" secondAttribute="trailing" constant="179" id="Iur-b6-Y94"/>
+                            <constraint firstItem="hXd-rt-IU4" firstAttribute="centerX" secondItem="kGe-PA-Aeg" secondAttribute="centerX" id="MDA-uJ-wDJ"/>
+                            <constraint firstItem="qis-5Z-OzI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="TM6-zI-DFu"/>
+                            <constraint firstItem="hXd-rt-IU4" firstAttribute="baseline" secondItem="0jl-XA-ew2" secondAttribute="baseline" id="eKT-ke-ADu"/>
+                            <constraint firstItem="kGe-PA-Aeg" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="gMD-Rv-dyu"/>
+                            <constraint firstItem="kGe-PA-Aeg" firstAttribute="top" secondItem="hXd-rt-IU4" secondAttribute="bottom" constant="8" symbolic="YES" id="ixN-B9-nh5"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="kGe-PA-Aeg" secondAttribute="bottom" constant="606" id="oNU-BU-rCX"/>
+                            <constraint firstItem="qis-5Z-OzI" firstAttribute="centerX" secondItem="0jl-XA-ew2" secondAttribute="centerX" id="rBi-ip-ezW"/>
+                            <constraint firstItem="NsU-1o-eIb" firstAttribute="baseline" secondItem="0jl-XA-ew2" secondAttribute="baseline" id="t1b-fv-dcY"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="currentTemperature" destination="kGe-PA-Aeg" id="Rpk-A4-qUr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
